@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 400px;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 14px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .analyze-btn {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        .analyze-btn:hover {
+            background-color: #3367d6;
+        }
+        
+        .analyze-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .results-container {
+            display: none;
+        }
+        
+        .no-duplicates {
+            text-align: center;
+            color: #666;
+            padding: 20px;
+        }
+        
+        .duplicate-group {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        
+        .group-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .group-checkbox {
+            margin-right: 10px;
+        }
+        
+        .group-url {
+            flex: 1;
+            font-size: 12px;
+            color: #666;
+            word-break: break-all;
+        }
+        
+        .tab-list {
+            margin-left: 25px;
+        }
+        
+        .tab-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            padding: 5px;
+            background-color: #f8f9fa;
+            border-radius: 3px;
+        }
+        
+        .tab-checkbox {
+            margin-right: 10px;
+        }
+        
+        .tab-title {
+            flex: 1;
+            font-size: 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .close-tabs-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .close-tabs-btn:hover {
+            background-color: #c82333;
+        }
+        
+        .close-tabs-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #666;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h3>Duplicate Tab Remover</h3>
+    </div>
+    
+    <button id="analyzeBtn" class="analyze-btn">Analyze Tabs for Duplicates</button>
+    
+    <div id="loadingMsg" class="loading" style="display: none;">
+        Analyzing tabs...
+    </div>
+    
+    <div id="resultsContainer" class="results-container">
+        <div id="noDuplicates" class="no-duplicates" style="display: none;">
+            No duplicate tabs found!
+        </div>
+        
+        <div id="duplicateGroups"></div>
+        
+        <button id="closeTabsBtn" class="close-tabs-btn" style="display: none;">Close Selected Tabs</button>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

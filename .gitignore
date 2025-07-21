@@ -1,0 +1,30 @@
+# Development files
+.DS_Store
+*.log
+*.tmp
+*.temp
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Chrome extension packaging
+*.zip
+*.crx
+*.pem
+
+# Temporary icon generation files
+create_icons.html
+icon.svg
+
+# Node modules (if using build tools)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build artifacts
+dist/
+build/
