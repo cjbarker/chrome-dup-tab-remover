@@ -7,7 +7,7 @@ A Chrome extension that helps you identify and remove duplicate tabs, keeping yo
 - **One-Click Analysis**: Analyze all open tabs for duplicates with a single button click
 - **Tree Structure Display**: View duplicate tabs organized by URL in an easy-to-read grouped format
 - **Selective Removal**: Choose which specific tabs to close or select entire groups
-- **Smart Defaults**: Automatically selects duplicate tabs while keeping one instance of each URL open
+- **Smart Defaults**: Automatically selects duplicate tabs while preserving one instance of each URL
 - **URL Normalization**: Intelligently identifies duplicates by ignoring tracking parameters and URL variations
 
 ## Installation
@@ -36,7 +36,7 @@ A Chrome extension that helps you identify and remove duplicate tabs, keeping yo
 
 ### Expected Behavior
 - ✅ Only groups with 2+ identical URLs should appear as duplicates
-- ✅ First tab in each group should remain unselected by default (preserved)
+- ✅ Duplicate tabs should be selected by default, keeping one tab per URL unchecked (when auto-select is enabled)
 - ✅ Group checkboxes should control all tabs in that group
 - ✅ Confirmation dialog should appear before closing tabs
 - ✅ Extension should re-analyze automatically after closing tabs
@@ -66,7 +66,7 @@ The extension:
 - Normalizes URLs by removing common tracking parameters
 - Groups tabs with identical normalized URLs
 - Displays groups with 2+ tabs as duplicates
-- Allows selective removal while preserving at least one tab per unique URL
+- Allows selective removal while automatically preserving at least one tab per unique URL
 
 ## Files Structure
 

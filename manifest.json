@@ -4,7 +4,8 @@
   "version": "1.0",
   "description": "Identify and remove duplicate tabs with ease",
   "permissions": [
-    "tabs"
+    "tabs",
+    "storage"
   ],
   "action": {
     "default_popup": "popup.html",
