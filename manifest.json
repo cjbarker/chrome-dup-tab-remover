@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Duplicate Tab Remover",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Identify and remove duplicate tabs with ease",
   "permissions": [
     "tabs",
